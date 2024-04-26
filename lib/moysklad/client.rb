@@ -9,8 +9,8 @@ require_relative 'client/errors'
 class Moysklad::Client
   URL  ='https://api.moysklad.ru/api/remap/1.2/'
 
-  def initialize login: nil, password: nil, logger: nil
-    @client = Faraday.new URL do |conn|
+  def initialize login: nil, password: nil, logger: nil, proxy: nil
+    @client = Faraday.new URL, proxy: proxy do |conn|
       unless logger.nil?
         conn.response :detailed_logger, logger
         conn.request :curl, logger, :info

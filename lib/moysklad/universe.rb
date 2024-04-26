@@ -27,8 +27,8 @@ module Moysklad
     #
     # @param login
     # @param password
-    def self.build login: nil, password: nil, logger: nil
-      new client: client_class.new(login: login, password: password, logger: nil)
+    def self.build login: nil, password: nil, logger: nil, proxy: nil
+      new client: client_class.new(login: login, password: password, logger: nil, proxy: proxy)
     end
 
     @@resources_list = []
