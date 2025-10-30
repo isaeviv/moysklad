@@ -1,5 +1,5 @@
 require 'faraday'
-require 'faraday/detailed_logger'
+# require 'faraday/detailed_logger'
 require 'faraday_curl'
 require 'faraday/gzip'
 require 'faraday/encoding'
